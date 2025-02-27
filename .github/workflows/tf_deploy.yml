@@ -3,7 +3,6 @@ name: Deploy Terraform
 on:
   push:
     branches:
-      - main
       - 'terraform/**'
   workflow_dispatch:
 
