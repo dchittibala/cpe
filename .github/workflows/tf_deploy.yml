@@ -2,7 +2,9 @@ name: Deploy Terraform
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+      - 'terraform/**'
   workflow_dispatch:
 
 permissions:
@@ -42,7 +44,7 @@ jobs:
     - name: Terraform Plan
       working-directory: ./terraform
       run: terraform plan
-      
+
     - name: Terraform apply
       working-directory: ./terraform
       run: terraform apply -auto-approve
