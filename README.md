@@ -6,3 +6,6 @@ This repo builds a simple cat gif generator that runs on AWS in ECS.
 
 ## Final Result.
 ![](images/cat.png)
+
+
+[NOTE]: All resources are deleted. Dont force to create it via github actions as I have stripped out role permissions.
