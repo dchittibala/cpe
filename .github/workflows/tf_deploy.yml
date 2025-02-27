@@ -8,7 +8,7 @@ on:
 permissions:
   id-token: write # This is required for requesting the JWT
   contents: read  # This is required for actions/checkout
-  
+
 env:
   AWS_REGION: us-east-1
 
@@ -42,6 +42,7 @@ jobs:
     - name: Terraform Plan
       working-directory: ./terraform
       run: terraform plan
+      
     - name: Terraform apply
       working-directory: ./terraform
-      run: terraform apply
+      run: terraform apply -auto-approve
